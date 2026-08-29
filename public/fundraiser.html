@@ -16,691 +16,508 @@
 
   <meta
     name="description"
-    content="Support the Weston Eagles on their Road to Pigeon Forge and the Ripken Experience."
+    content="Support a Weston Eagles player on the Road to Pigeon Forge and the Ripken Experience."
   >
-
 
   <style>
 
-    /* ==========================================
-       WESTON EAGLES
-       ROAD TO PIGEON FORGE
-    ========================================== */
-
     :root {
-
-      --navy:#07184a;
-      --navy2:#0b255f;
-      --blue:#163d8f;
-
-      --silver:#c9ced8;
-      --silver2:#eef1f5;
-
+      --navy:#05133f;
+      --navy2:#0b2b72;
+      --blue:#164ba8;
+      --silver:#cbd1da;
+      --silver2:#f3f5f8;
       --white:#ffffff;
-
-      --black:#05070b;
-      --charcoal:#0c1017;
-      --card:#111722;
-
-      --muted:#98a0af;
-
-      --red:#b91c2c;
+      --black:#03050a;
+      --charcoal:#080d15;
+      --card:#0e1522;
+      --muted:#8f98a8;
+      --red:#b21f2d;
     }
-
 
     * {
       box-sizing:border-box;
     }
 
-
     html {
       scroll-behavior:smooth;
     }
 
-
     body {
-
       margin:0;
-
-      color:var(--white);
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      background:
-
-        radial-gradient(
-          circle at 12% 5%,
-          rgba(22,61,143,.28),
-          transparent 30%
-        ),
-
-        radial-gradient(
-          circle at 90% 10%,
-          rgba(201,206,216,.12),
-          transparent 30%
-        ),
-
-        linear-gradient(
-          180deg,
-          #070b14 0%,
-          #05070b 100%
-        );
-
       min-height:100vh;
+      color:#fff;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#03050a;
+      overflow-x:hidden;
     }
-
-
-    a {
-      color:inherit;
-    }
-
 
     button,
     input {
       font:inherit;
     }
 
-
-    /* ==========================================
-       PAGE
-    ========================================== */
-
-    .page {
-
-      width:100%;
-
-      max-width:1220px;
-
-      margin:0 auto;
-
-      padding:
-        30px
-        22px
-        65px;
-    }
-
-
-    /* ==========================================
-       NOTICE
-    ========================================== */
-
-    .payment-notice {
-
-      display:none;
-
-      margin-bottom:18px;
-
-      padding:
-        15px
-        18px;
-
-      text-align:center;
-
-      border-radius:12px;
-
-      font-weight:900;
-
-      font-size:13px;
-    }
-
-
-    .payment-notice.success {
-
-      display:block;
-
-      background:
-        rgba(18,118,65,.18);
-
-      border:
-        1px solid
-        rgba(73,220,125,.35);
-
-      color:#83efa8;
-    }
-
-
-    .payment-notice.cancelled {
-
-      display:block;
-
-      background:
-        rgba(185,28,44,.16);
-
-      border:
-        1px solid
-        rgba(255,95,105,.30);
-
-      color:#ff9299;
-    }
-
-
-    /* ==========================================
-       HERO
-    ========================================== */
-
-    .hero {
-
-      position:relative;
-
-      overflow:hidden;
-
-      padding:
-        36px
-        28px
-        34px;
-
-      border:
-        1px solid
-        rgba(255,255,255,.08);
-
-      border-radius:24px;
-
-      text-align:center;
-
-      background:
-
-        radial-gradient(
-          circle at 15% 0%,
-          rgba(22,61,143,.35),
-          transparent 30%
-        ),
-
-        radial-gradient(
-          circle at 90% 20%,
-          rgba(201,206,216,.14),
-          transparent 30%
-        ),
-
-        linear-gradient(
-          145deg,
-          #101724 0%,
-          #080c13 55%,
-          #05070b 100%
-        );
-
-      box-shadow:
-        0 25px 60px
-        rgba(0,0,0,.35);
-    }
-
-
-    .hero:after {
-
+    body::before {
       content:"";
-
-      position:absolute;
-
-      left:-10%;
-      right:-10%;
-      bottom:-120px;
-
-      height:260px;
-
-      opacity:.35;
+      position:fixed;
+      inset:0;
+      z-index:-5;
 
       background:
 
-        linear-gradient(
-          145deg,
-          transparent 0 23%,
-          #1c2432 23.5% 39%,
-          transparent 39.5%
+        radial-gradient(
+          circle at 15% 8%,
+          rgba(28,83,181,.28),
+          transparent 32%
+        ),
+
+        radial-gradient(
+          circle at 88% 10%,
+          rgba(203,209,218,.10),
+          transparent 30%
         ),
 
         linear-gradient(
-          215deg,
-          transparent 0 34%,
-          #151c28 34.5% 52%,
-          transparent 52.5%
-        ),
+          180deg,
+          #071027 0%,
+          #050912 42%,
+          #03050a 100%
+        );
+    }
 
+    body::after {
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-4;
+
+      opacity:.16;
+
+      background-image:
         linear-gradient(
-          145deg,
-          transparent 0 58%,
-          #101620 58.5% 70%,
-          transparent 70.5%
-        );
-
-      pointer-events:none;
-    }
-
-
-    .hero-logo {
-
-      position:relative;
-
-      z-index:2;
-
-      width:
-        min(
-          190px,
-          48vw
-        );
-
-      max-height:150px;
-
-      object-fit:contain;
-
-      margin-bottom:16px;
-
-      filter:
-        drop-shadow(
-          0 8px 18px
-          rgba(0,0,0,.45)
-        );
-    }
-
-
-    .hero-kicker {
-
-      position:relative;
-
-      z-index:2;
-
-      color:
-        var(--silver);
-
-      font-size:10px;
-
-      font-weight:900;
-
-      letter-spacing:3px;
-
-      text-transform:uppercase;
-    }
-
-
-    .hero h1 {
-
-      position:relative;
-
-      z-index:2;
-
-      margin:
-        10px
-        0
-        0;
-
-      font-size:
-        clamp(
-          40px,
-          7vw,
-          82px
-        );
-
-      line-height:.9;
-
-      font-weight:950;
-
-      letter-spacing:-3px;
-
-      text-transform:uppercase;
-    }
-
-
-    .hero h1 span {
-
-      display:block;
-
-      margin-top:8px;
-
-      color:
-        var(--silver2);
-
-      text-shadow:
-
-        2px 2px 0
-        var(--navy2),
-
-        0 0 25px
-        rgba(201,206,216,.14);
-    }
-
-
-    .hero-subtitle {
-
-      position:relative;
-
-      z-index:2;
-
-      max-width:650px;
-
-      margin:
-        20px
-        auto
-        0;
-
-      color:#b1b7c3;
-
-      font-size:14px;
-
-      line-height:1.55;
-    }
-
-
-    .player-title {
-
-      position:relative;
-
-      z-index:2;
-
-      margin-top:27px;
-
-      color:#ffffff;
-
-      font-size:
-        clamp(
-          25px,
-          5vw,
-          42px
-        );
-
-      line-height:1;
-
-      font-weight:950;
-
-      text-transform:uppercase;
-    }
-
-
-    .player-title span {
-
-      color:
-        var(--silver);
-    }
-
-
-    /* ==========================================
-       PROGRESS
-    ========================================== */
-
-    .progress-card {
-
-      margin-top:18px;
-
-      padding:
-        20px
-        22px;
-
-      border:
-        1px solid
-        rgba(255,255,255,.08);
-
-      border-radius:18px;
-
-      background:
-        rgba(17,23,34,.86);
-
-      box-shadow:
-        0 18px 40px
-        rgba(0,0,0,.24);
-    }
-
-
-    .progress-top {
-
-      display:flex;
-
-      justify-content:space-between;
-
-      align-items:flex-end;
-
-      gap:16px;
-
-      margin-bottom:13px;
-    }
-
-
-    .progress-label {
-
-      color:
-        var(--silver);
-
-      font-size:9px;
-
-      font-weight:900;
-
-      letter-spacing:2px;
-
-      text-transform:uppercase;
-    }
-
-
-    .progress-money {
-
-      margin-top:5px;
-
-      font-size:
-        clamp(
-          20px,
-          4vw,
-          30px
-        );
-
-      font-weight:950;
-    }
-
-
-    .progress-percent {
-
-      color:
-        var(--silver2);
-
-      font-size:19px;
-
-      font-weight:950;
-    }
-
-
-    .progress-track {
-
-      width:100%;
-
-      height:14px;
-
-      overflow:hidden;
-
-      border-radius:99px;
-
-      background:#252c37;
-    }
-
-
-    .progress-fill {
-
-      width:0%;
-
-      height:100%;
-
-      border-radius:99px;
-
-      background:
-
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        ),
         linear-gradient(
           90deg,
-          var(--navy2),
-          var(--silver)
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
         );
 
-      transition:
-        width .45s ease;
+      background-size:38px 38px;
     }
 
+    .page {
+      width:100%;
+      max-width:1280px;
+      margin:0 auto;
+      padding:14px 18px 60px;
+    }
 
-    .progress-bottom {
-
-      display:flex;
-
-      justify-content:space-between;
-
-      gap:15px;
-
-      margin-top:9px;
-
-      color:#7f8795;
-
+    .back-link {
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin:3px 0 12px;
+      color:#a7b0be;
+      text-decoration:none;
       font-size:10px;
-
-      font-weight:700;
-    }
-
-
-    /* ==========================================
-       CONTENT GRID
-    ========================================== */
-
-    .content-grid {
-
-      display:grid;
-
-      grid-template-columns:
-        minmax(0,1.65fr)
-        minmax(300px,.75fr);
-
-      gap:18px;
-
-      margin-top:18px;
-    }
-
-
-    .panel {
-
-      border:
-        1px solid
-        rgba(255,255,255,.08);
-
-      border-radius:20px;
-
-      background:
-        rgba(12,16,23,.90);
-
-      box-shadow:
-        0 18px 44px
-        rgba(0,0,0,.26);
-    }
-
-
-    .balls-panel {
-
-      padding:
-        22px;
-    }
-
-
-    .side-panel {
-
-      padding:
-        22px;
-
-      align-self:start;
-
-      position:sticky;
-
-      top:16px;
-    }
-
-
-    /* ==========================================
-       HEADINGS
-    ========================================== */
-
-    .section-kicker {
-
-      color:
-        var(--silver);
-
-      font-size:9px;
-
       font-weight:900;
-
-      letter-spacing:2px;
-
+      letter-spacing:1.1px;
       text-transform:uppercase;
     }
 
+    .back-link:hover {
+      color:#fff;
+    }
 
-    .section-title {
+    .payment-notice {
+      display:none;
+      margin-bottom:14px;
+      padding:14px 18px;
+      border-radius:12px;
+      text-align:center;
+      font-size:12px;
+      font-weight:900;
+    }
 
-      margin:
-        5px
-        0
-        8px;
+    .payment-notice.success {
+      display:block;
+      color:#91efb0;
+      background:rgba(20,120,67,.18);
+      border:1px solid rgba(89,231,139,.30);
+    }
+
+    .payment-notice.cancelled {
+      display:block;
+      color:#ff9ba2;
+      background:rgba(185,28,44,.16);
+      border:1px solid rgba(255,91,102,.28);
+    }
+
+    /* HERO */
+
+    .hero {
+      position:relative;
+      overflow:hidden;
+
+      min-height:430px;
+
+      border-radius:27px;
+      border:1px solid rgba(255,255,255,.09);
+
+      background:
+
+        radial-gradient(
+          circle at 17% 15%,
+          rgba(28,83,181,.50),
+          transparent 34%
+        ),
+
+        radial-gradient(
+          circle at 82% 20%,
+          rgba(255,255,255,.08),
+          transparent 27%
+        ),
+
+        linear-gradient(
+          135deg,
+          #091b4a 0%,
+          #071127 44%,
+          #050811 100%
+        );
+
+      box-shadow:
+        0 28px 70px rgba(0,0,0,.44);
+    }
+
+    .hero::after {
+      content:"";
+      position:absolute;
+      left:-5%;
+      right:-5%;
+      bottom:0;
+      height:225px;
+      opacity:.48;
+
+      background:#101725;
+
+      clip-path:polygon(
+        0% 100%,
+        0% 78%,
+        11% 63%,
+        20% 74%,
+        31% 44%,
+        43% 70%,
+        53% 38%,
+        64% 67%,
+        75% 47%,
+        86% 72%,
+        94% 57%,
+        100% 70%,
+        100% 100%
+      );
+    }
+
+    .hero-inner {
+      position:relative;
+      z-index:3;
+
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:30px;
+      align-items:center;
+
+      min-height:430px;
+
+      padding:
+        42px
+        50px
+        95px;
+    }
+
+    .hero-kicker {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+
+      padding:7px 12px;
+
+      border-radius:999px;
+
+      border:1px solid rgba(255,255,255,.13);
+
+      background:rgba(255,255,255,.05);
+
+      color:#c7ced9;
+
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    .hero-kicker::before {
+      content:"";
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:#fff;
+      box-shadow:0 0 12px #77a0ff;
+    }
+
+    .hero h1 {
+      margin:17px 0 0;
 
       font-size:
         clamp(
-          23px,
-          4vw,
-          34px
+          44px,
+          7vw,
+          84px
         );
 
-      line-height:1;
-
+      line-height:.84;
+      letter-spacing:-4px;
       font-weight:950;
-
       text-transform:uppercase;
     }
 
+    .hero h1 span {
+      display:block;
+      color:var(--silver2);
 
-    .section-text {
-
-      margin:0;
-
-      color:#9098a7;
-
-      font-size:12px;
-
-      line-height:1.55;
+      text-shadow:
+        3px 3px 0 var(--navy2);
     }
 
+    .player-name {
+      margin-top:23px;
+      font-size:clamp(28px,5vw,45px);
+      line-height:.95;
+      font-weight:950;
+      text-transform:uppercase;
+    }
 
-    /* ==========================================
-       BASEBALL GRID
-    ========================================== */
+    .player-name .number {
+      color:#9ab0e5;
+    }
 
-    .baseball-grid {
+    .hero-copy {
+      max-width:600px;
+      margin-top:13px;
+      color:#aeb7c5;
+      font-size:13px;
+      line-height:1.6;
+    }
 
-      display:grid;
+    .hero-logo-wrap {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+    }
 
-      grid-template-columns:
-        repeat(
-          10,
-          minmax(0,1fr)
+    .hero-logo-wrap::before {
+      content:"";
+      position:absolute;
+      width:280px;
+      height:280px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.07);
+      box-shadow:
+        0 0 0 28px rgba(255,255,255,.017),
+        0 0 0 56px rgba(255,255,255,.010);
+    }
+
+    .hero-logo {
+      position:relative;
+      z-index:2;
+      width:min(280px,70vw);
+      max-height:260px;
+      object-fit:contain;
+
+      filter:
+        drop-shadow(0 20px 30px rgba(0,0,0,.52))
+        drop-shadow(0 0 22px rgba(80,120,220,.18));
+    }
+
+    /* PROGRESS */
+
+    .progress-card {
+      position:relative;
+      z-index:4;
+
+      width:calc(100% - 70px);
+      margin:-52px auto 0;
+
+      padding:21px 24px;
+
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.10);
+
+      background:rgba(12,17,27,.95);
+
+      backdrop-filter:blur(14px);
+
+      box-shadow:
+        0 22px 45px rgba(0,0,0,.34);
+    }
+
+    .progress-top {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:18px;
+    }
+
+    .progress-label {
+      color:#9099a8;
+      font-size:8px;
+      font-weight:900;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    .progress-money {
+      margin-top:5px;
+      font-size:27px;
+      font-weight:950;
+    }
+
+    .progress-percent {
+      font-size:22px;
+      font-weight:950;
+      color:#dce3ed;
+    }
+
+    .progress-track {
+      margin-top:13px;
+      width:100%;
+      height:14px;
+      overflow:hidden;
+      border-radius:999px;
+      background:#252d39;
+    }
+
+    .progress-fill {
+      height:100%;
+      width:0%;
+      border-radius:999px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #0b2b72,
+          #7d8eaf,
+          #d3d9e1
         );
 
-      gap:14px 10px;
+      transition:width .4s ease;
+    }
 
+    .progress-bottom {
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      margin-top:8px;
+
+      color:#747d8b;
+      font-size:9px;
+      font-weight:800;
+    }
+
+    /* MAIN LAYOUT */
+
+    .content-grid {
+      display:grid;
+      grid-template-columns:minmax(0,1.55fr) minmax(300px,.70fr);
+      gap:18px;
       margin-top:24px;
     }
 
+    .panel {
+      border-radius:21px;
+      border:1px solid rgba(255,255,255,.08);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(15,22,35,.97),
+          rgba(7,11,18,.98)
+        );
+
+      box-shadow:
+        0 18px 40px rgba(0,0,0,.24);
+    }
+
+    .balls-panel {
+      padding:25px 23px;
+    }
+
+    .side-panel {
+      padding:22px;
+      align-self:start;
+      position:sticky;
+      top:14px;
+    }
+
+    .section-kicker {
+      color:#8197c8;
+      font-size:8px;
+      font-weight:900;
+      letter-spacing:2.3px;
+      text-transform:uppercase;
+    }
+
+    .section-title {
+      margin:5px 0 8px;
+
+      font-size:
+        clamp(
+          27px,
+          4vw,
+          38px
+        );
+
+      line-height:.95;
+      letter-spacing:-1px;
+      font-weight:950;
+      text-transform:uppercase;
+    }
+
+    .section-text {
+      max-width:700px;
+      margin:0;
+      color:#8f98a7;
+      font-size:12px;
+      line-height:1.55;
+    }
+
+    /* BASEBALLS */
+
+    .baseball-grid {
+      display:grid;
+      grid-template-columns:repeat(10,minmax(0,1fr));
+      gap:16px 9px;
+      margin-top:27px;
+    }
 
     .ball-wrap {
-
       display:flex;
-
       flex-direction:column;
-
       align-items:center;
-
       min-width:0;
     }
 
-
     .baseball {
-
-      width:64px;
-
-      height:64px;
-
       position:relative;
 
       display:flex;
-
+      justify-content:center;
       align-items:center;
 
-      justify-content:center;
+      width:66px;
+      height:66px;
 
       overflow:hidden;
 
@@ -710,626 +527,424 @@
 
       cursor:pointer;
 
-      border:
-        2px solid
-        #bfc4ce;
+      border:2px solid #c7ccd3;
 
       background:
 
         radial-gradient(
           circle at 35% 28%,
-          #ffffff 0%,
-          #ffffff 38%,
-          #f0f0f0 68%,
-          #ced0d4 100%
+          #fff 0%,
+          #fff 37%,
+          #f0f0f0 66%,
+          #c9ccd0 100%
         );
 
       box-shadow:
-
-        0 5px 12px
-        rgba(0,0,0,.30),
-
-        inset -6px -6px 11px
-        rgba(0,0,0,.08);
+        0 6px 13px rgba(0,0,0,.34),
+        inset -7px -7px 12px rgba(0,0,0,.08);
 
       transition:
-
         transform .15s ease,
-
         box-shadow .15s ease,
-
         border-color .15s ease;
     }
 
-
-    .baseball:before,
-    .baseball:after {
-
+    .baseball::before,
+    .baseball::after {
       content:"";
-
       position:absolute;
+      top:-9px;
 
-      top:-8px;
+      width:51px;
+      height:82px;
 
-      width:50px;
-
-      height:80px;
-
-      border:
-        2px dashed
-        #bf2635;
-
+      border:2px dashed #b92534;
       border-radius:50%;
     }
 
-
-    .baseball:before {
-      left:-35px;
+    .baseball::before {
+      left:-36px;
     }
 
-
-    .baseball:after {
-      right:-35px;
+    .baseball::after {
+      right:-36px;
     }
-
 
     .baseball-number {
-
       position:relative;
+      z-index:3;
 
-      z-index:2;
-
-      color:
-        var(--navy);
+      color:#071b52;
 
       font-size:19px;
-
       font-weight:950;
     }
 
-
     .baseball:hover:not(.sold) {
-
       transform:
         translateY(-3px)
         scale(1.04);
 
-      border-color:
-        var(--navy2);
+      border-color:#5578c4;
     }
-
 
     .baseball.selected {
+      transform:scale(1.06);
 
-      border-color:
-        var(--silver2);
+      border-color:#fff;
 
       box-shadow:
-
-        0 0 0 3px
-        rgba(22,61,143,.70),
-
-        0 0 18px
-        rgba(201,206,216,.35),
-
-        0 8px 18px
-        rgba(0,0,0,.30);
-
-      transform:
-        scale(1.05);
+        0 0 0 3px rgba(28,83,181,.82),
+        0 0 20px rgba(103,139,224,.34),
+        0 8px 18px rgba(0,0,0,.34);
     }
 
-
     .baseball.sold {
-
       cursor:not-allowed;
 
       background:
 
         radial-gradient(
           circle at 35% 28%,
-          #343b47 0%,
-          #202631 48%,
-          #0c1017 100%
+          #363d48 0%,
+          #232a35 48%,
+          #0b1018 100%
         );
 
-      border-color:
-        #555d6b;
-
-      opacity:.88;
+      border-color:#555e6b;
+      opacity:.90;
     }
 
-
-    .baseball.sold:before,
-    .baseball.sold:after {
-
-      border-color:
-        #727985;
+    .baseball.sold::before,
+    .baseball.sold::after {
+      border-color:#747d89;
     }
 
-
-    .baseball.sold
-    .baseball-number {
-
-      color:#ffffff;
+    .baseball.sold .baseball-number {
+      color:#fff;
     }
-
 
     .donor-name {
-
-      width:76px;
-
+      width:78px;
       min-height:20px;
-
       margin-top:5px;
 
       overflow:hidden;
 
-      color:
-        #94a9da;
+      color:#86a2df;
 
       text-align:center;
 
       font-size:8px;
-
       line-height:1.2;
-
       font-weight:900;
 
       word-break:break-word;
     }
 
-
-    /* ==========================================
-       SUMMARY
-    ========================================== */
+    /* CHECKOUT PANEL */
 
     .selection-box {
+      padding:17px;
+      margin-bottom:21px;
 
-      margin-bottom:20px;
+      border-radius:15px;
 
-      padding:
-        16px;
-
-      border-radius:14px;
+      border:1px solid rgba(167,184,223,.18);
 
       background:
+
+        radial-gradient(
+          circle at 95% 0%,
+          rgba(81,116,200,.20),
+          transparent 35%
+        ),
+
         linear-gradient(
           145deg,
-          rgba(22,61,143,.22),
-          rgba(201,206,216,.06)
+          rgba(15,43,105,.36),
+          rgba(255,255,255,.025)
         );
-
-      border:
-        1px solid
-        rgba(201,206,216,.18);
     }
 
-
     .selection-label {
-
-      color:
-        var(--silver);
-
+      color:#8fa1c7;
       font-size:8px;
-
       font-weight:900;
-
       letter-spacing:1.8px;
-
       text-transform:uppercase;
     }
 
-
     .selection-total {
-
-      margin-top:5px;
-
-      color:#ffffff;
-
-      font-size:28px;
-
+      margin-top:4px;
+      color:#fff;
+      font-size:31px;
       font-weight:950;
     }
 
-
     .selection-count {
-
       margin-top:3px;
-
-      color:#8f97a5;
-
+      color:#8d96a5;
       font-size:10px;
     }
 
-
-    /* ==========================================
-       FORM
-    ========================================== */
-
     .field {
-
       margin-top:14px;
     }
 
-
     .field label {
-
       display:block;
-
       margin-bottom:6px;
 
-      color:#c7ccd5;
+      color:#c4cad4;
 
-      font-size:9px;
-
+      font-size:8px;
       font-weight:900;
-
-      letter-spacing:1px;
-
+      letter-spacing:1.1px;
       text-transform:uppercase;
     }
 
-
     .field input {
-
       width:100%;
+      min-height:49px;
 
-      min-height:48px;
+      padding:0 13px;
 
-      padding:
-        0
-        13px;
+      color:#fff;
 
-      color:#ffffff;
+      border:1px solid #2b3441;
+      border-radius:11px;
+
+      background:#080d14;
 
       outline:none;
-
-      border:
-        1px solid
-        #2a313d;
-
-      border-radius:10px;
-
-      background:#090d13;
 
       font-size:13px;
     }
 
-
     .field input:focus {
-
-      border-color:
-        var(--silver);
+      border-color:#7690cb;
     }
 
-
     .anonymous-row {
-
       display:flex;
-
       align-items:center;
-
       gap:8px;
 
       margin-top:12px;
 
-      color:#a3abb8;
+      color:#9da6b5;
 
       font-size:11px;
 
       cursor:pointer;
     }
 
-
     .anonymous-row input {
-
       width:17px;
-
       height:17px;
-
-      accent-color:
-        var(--navy2);
+      accent-color:#174497;
     }
 
-
-    /* ==========================================
-       BUTTONS
-    ========================================== */
-
     .primary-button {
-
       width:100%;
-
       min-height:52px;
-
       margin-top:16px;
 
       border:0;
-
       border-radius:11px;
 
       cursor:pointer;
 
-      color:#ffffff;
+      color:#fff;
 
       background:
-
         linear-gradient(
-          115deg,
-          #0f327f,
-          #8792a7
+          110deg,
+          #123c8d,
+          #7385a7
         );
 
       box-shadow:
-        0 10px 25px
-        rgba(15,50,127,.20);
+        0 12px 26px rgba(10,49,129,.25);
 
-      font-size:11px;
-
+      font-size:10px;
       font-weight:950;
-
-      letter-spacing:1px;
-
+      letter-spacing:1.2px;
       text-transform:uppercase;
     }
 
-
     .primary-button:hover {
-
       filter:brightness(1.10);
     }
 
-
     .primary-button:disabled {
-
-      opacity:.45;
-
+      opacity:.44;
       cursor:not-allowed;
     }
 
-
     .secondary-button {
-
       width:100%;
+      min-height:47px;
+      margin-top:10px;
 
-      min-height:48px;
-
-      margin-top:11px;
+      border:1px solid #36404e;
+      border-radius:10px;
 
       cursor:pointer;
 
-      color:#ffffff;
+      color:#fff;
+      background:#111824;
 
-      border:
-        1px solid
-        #3a4352;
-
-      border-radius:10px;
-
-      background:#121824;
-
-      font-size:10px;
-
+      font-size:9px;
       font-weight:900;
-
-      letter-spacing:.8px;
-
+      letter-spacing:1px;
       text-transform:uppercase;
     }
-
-
-    /* ==========================================
-       GENERAL DONATION
-    ========================================== */
 
     .general-box {
-
       margin-top:22px;
-
-      padding-top:20px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,.08);
+      padding-top:21px;
+      border-top:1px solid rgba(255,255,255,.08);
     }
 
-
     .general-box h3 {
-
-      margin:
-        5px
-        0
-        6px;
-
+      margin:5px 0 6px;
       font-size:19px;
-
       font-weight:950;
-
       text-transform:uppercase;
     }
 
-
     .general-box p {
-
       margin:0;
-
-      color:#888f9d;
-
-      font-size:11px;
-
-      line-height:1.45;
+      color:#878f9d;
+      font-size:10px;
+      line-height:1.5;
     }
 
-
-    /* ==========================================
-       LOADING / ERROR
-    ========================================== */
-
     .status {
-
-      margin-top:13px;
-
-      color:#aeb5c1;
-
+      margin-top:12px;
+      color:#aab2bf;
       font-size:10px;
-
+      line-height:1.4;
       text-align:center;
     }
 
-
     .status.error {
-      color:#ff8c95;
+      color:#ff919a;
     }
 
+    @media(max-width:980px) {
 
-    /* ==========================================
-       MOBILE
-    ========================================== */
+      .hero-inner {
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:40px 26px 100px;
+      }
 
-    @media(max-width:950px) {
+      .hero-copy {
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero-logo-wrap {
+        margin-top:6px;
+      }
+
+      .hero-logo {
+        width:230px;
+      }
 
       .content-grid {
-
         grid-template-columns:1fr;
       }
 
-
       .side-panel {
-
         position:static;
       }
 
-
       .baseball-grid {
-
-        grid-template-columns:
-          repeat(
-            8,
-            minmax(0,1fr)
-          );
+        grid-template-columns:repeat(8,minmax(0,1fr));
       }
-
     }
-
 
     @media(max-width:700px) {
 
       .page {
-
-        padding:
-          15px
-          10px
-          40px;
+        padding:8px 8px 40px;
       }
-
 
       .hero {
-
-        padding:
-          28px
-          15px
-          29px;
-
-        border-radius:18px;
+        border-radius:19px;
       }
 
+      .hero-inner {
+        padding:30px 15px 88px;
+      }
 
       .hero h1 {
-
-        letter-spacing:-2px;
+        font-size:49px;
+        letter-spacing:-3px;
       }
 
+      .hero-logo {
+        width:190px;
+      }
 
       .progress-card {
-
-        padding:
-          17px
-          14px;
+        width:calc(100% - 24px);
+        margin-top:-43px;
+        padding:17px 14px;
       }
 
-
-      .progress-top {
-
-        align-items:center;
+      .progress-money {
+        font-size:20px;
       }
 
+      .progress-percent {
+        font-size:18px;
+      }
 
       .balls-panel,
       .side-panel {
-
-        padding:
-          16px
-          10px;
+        padding:17px 10px;
       }
-
 
       .baseball-grid {
-
-        grid-template-columns:
-          repeat(
-            5,
-            minmax(0,1fr)
-          );
-
-        gap:
-          14px
-          3px;
+        grid-template-columns:repeat(5,minmax(0,1fr));
+        gap:14px 3px;
       }
 
-
       .baseball {
-
         width:59px;
-
         height:59px;
       }
 
-
       .baseball-number {
-
         font-size:17px;
       }
 
-
       .donor-name {
-
-        width:62px;
-
+        width:63px;
         font-size:7px;
       }
-
-    }
-
-
-    @media(max-width:355px) {
-
-      .baseball {
-
-        width:53px;
-
-        height:53px;
-      }
-
-
-      .baseball-grid {
-
-        gap:
-          13px
-          1px;
-      }
-
     }
 
   </style>
 
 </head>
 
-
-
 <body>
 
 <div class="page">
+
+
+  <a
+    href="/"
+    class="back-link"
+  >
+    ← Back to Weston Eagles
+  </a>
 
 
   <div
@@ -1338,48 +953,52 @@
   ></div>
 
 
-  <!-- ======================================
-       HERO
-  ======================================= -->
-
   <section class="hero">
 
-    <img
-      src="/weston-eagles-logo.png"
-      alt="Weston Eagles"
-      class="hero-logo"
-    >
+    <div class="hero-inner">
 
-    <div class="hero-kicker">
-      WESTON EAGLES BASEBALL
-    </div>
+      <div>
 
-    <h1>
-      ROAD TO
-      <span>PIGEON FORGE</span>
-    </h1>
+        <div class="hero-kicker">
+          Weston Eagles Baseball
+        </div>
 
-    <p class="hero-subtitle">
-      Help our Weston Eagles players on their journey
-      to the Ripken Experience in Pigeon Forge, Tennessee.
-      Select one or more available baseballs below.
-      The number on each baseball equals the donation amount.
-    </p>
+        <h1>
+          Road To
+          <span>Pigeon Forge</span>
+        </h1>
 
-    <div
-      class="player-title"
-      id="playerTitle"
-    >
-      Loading Player...
+        <div
+          id="playerTitle"
+          class="player-name"
+        >
+          Loading Player...
+        </div>
+
+        <p class="hero-copy">
+          Support this Weston Eagles player on the journey
+          to the Ripken Experience in Pigeon Forge, Tennessee.
+          Pick one or more available baseballs below.
+          The number on each baseball equals your donation amount.
+        </p>
+
+      </div>
+
+
+      <div class="hero-logo-wrap">
+
+        <img
+          src="/weston-eagles-logo.png"
+          alt="Weston Eagles"
+          class="hero-logo"
+        >
+
+      </div>
+
     </div>
 
   </section>
 
-
-
-  <!-- ======================================
-       PROGRESS
-  ======================================= -->
 
   <section class="progress-card">
 
@@ -1388,12 +1007,12 @@
       <div>
 
         <div class="progress-label">
-          Fundraising Progress
+          Player Fundraising Progress
         </div>
 
         <div
-          class="progress-money"
           id="progressMoney"
+          class="progress-money"
         >
           $0 Raised of $1,830 Goal
         </div>
@@ -1402,8 +1021,8 @@
 
 
       <div
-        class="progress-percent"
         id="progressPercent"
+        class="progress-percent"
       >
         0%
       </div>
@@ -1412,17 +1031,17 @@
 
 
     <div
+      id="progressTrack"
       class="progress-track"
       role="progressbar"
       aria-valuemin="0"
       aria-valuemax="100"
       aria-valuenow="0"
-      id="progressTrack"
     >
 
       <div
-        class="progress-fill"
         id="progressFill"
+        class="progress-fill"
       ></div>
 
     </div>
@@ -1443,31 +1062,23 @@
   </section>
 
 
-
-  <!-- ======================================
-       CONTENT
-  ======================================= -->
-
   <div class="content-grid">
 
-
-    <!-- BASEBALLS -->
 
     <section class="panel balls-panel">
 
       <div class="section-kicker">
-        PICK YOUR BASEBALLS
+        Choose Your Baseballs
       </div>
 
       <h2 class="section-title">
-        60 WAYS TO SUPPORT
+        60 Ways To Support
       </h2>
 
       <p class="section-text">
-        Baseball #1 is a $1 donation.
-        Baseball #27 is a $27 donation.
-        Baseball #60 is a $60 donation.
-        Select as many available baseballs as you'd like.
+        Ball #1 is a $1 donation, ball #25 is a $25 donation,
+        and ball #60 is a $60 donation. Select as many available
+        baseballs as you'd like.
       </p>
 
 
@@ -1487,9 +1098,6 @@
     </section>
 
 
-
-    <!-- CHECKOUT -->
-
     <aside class="panel side-panel">
 
 
@@ -1500,15 +1108,15 @@
         </div>
 
         <div
-          class="selection-total"
           id="selectionTotal"
+          class="selection-total"
         >
           $0
         </div>
 
         <div
-          class="selection-count"
           id="selectionCount"
+          class="selection-count"
         >
           No baseballs selected
         </div>
@@ -1516,13 +1124,12 @@
       </div>
 
 
-
       <div class="section-kicker">
-        DONOR INFORMATION
+        Donor Information
       </div>
 
       <h2 class="section-title">
-        COMPLETE YOUR DONATION
+        Complete Your Donation
       </h2>
 
 
@@ -1561,7 +1168,7 @@
         type="button"
         disabled
       >
-        CONTINUE TO SECURE CHECKOUT
+        Continue To Secure Checkout
       </button>
 
 
@@ -1570,7 +1177,7 @@
         class="secondary-button"
         type="button"
       >
-        CLEAR SELECTION
+        Clear Selection
       </button>
 
 
@@ -1580,22 +1187,19 @@
       ></div>
 
 
-
-      <!-- GENERAL DONATION -->
-
       <div class="general-box">
 
         <div class="section-kicker">
-          ANOTHER WAY TO HELP
+          Another Way To Help
         </div>
 
         <h3>
-          GENERAL DONATION
+          General Donation
         </h3>
 
         <p>
-          Want to support this player without choosing
-          a baseball? Enter any amount below.
+          Want to support this player without choosing a baseball?
+          Enter any donation amount below.
         </p>
 
 
@@ -1622,7 +1226,7 @@
           class="primary-button"
           type="button"
         >
-          MAKE GENERAL DONATION
+          Make General Donation
         </button>
 
 
@@ -1640,78 +1244,76 @@
 </div>
 
 
-
 <script>
 
 const players = {
 
   "cooper-sweetland": {
-    name: "Cooper Sweetland",
-    number: 2
+    name:"Cooper Sweetland",
+    number:2
   },
 
   "greg-snyder": {
-    name: "Greg Snyder",
-    number: 3
+    name:"Greg Snyder",
+    number:3
   },
 
   "easton-mores": {
-    name: "Easton Mores",
-    number: 4
+    name:"Easton Mores",
+    number:4
   },
 
   "sebastian-eustice": {
-    name: "Sebastian Eustice",
-    number: 5
+    name:"Sebastian Eustice",
+    number:5
   },
 
   "michael-harris": {
-    name: "Michael Harris",
-    number: 7
+    name:"Michael Harris",
+    number:7
   },
 
   "hudson-tenn": {
-    name: "Hudson Tenn",
-    number: 10
+    name:"Hudson Tenn",
+    number:10
   },
 
   "austin-shin": {
-    name: "Austin Shin",
-    number: 17
+    name:"Austin Shin",
+    number:17
   },
 
   "diego-ventura": {
-    name: "Diego Ventura",
-    number: 22
+    name:"Diego Ventura",
+    number:22
   },
 
   "dylan-pimentel": {
-    name: "Dylan Pimentel",
-    number: 23
+    name:"Dylan Pimentel",
+    number:23
   },
 
   "jose-machado": {
-    name: "Jose Machado",
-    number: 24
+    name:"Jose Machado",
+    number:24
   },
 
   "massimo-iacona": {
-    name: "Massimo Iacona",
-    number: 25
+    name:"Massimo Iacona",
+    number:25
   },
 
   "oliver-zorrilla": {
-    name: "Oliver Zorrilla",
-    number: 44
+    name:"Oliver Zorrilla",
+    number:44
   },
 
   "axel-damico": {
-    name: "Axel D'Amico",
-    number: 99
+    name:"Axel D'Amico",
+    number:99
   }
 
 };
-
 
 
 const params =
@@ -1741,7 +1343,6 @@ const selectedBalls =
 
 let soldBallMap =
   new Map();
-
 
 
 const baseballGrid =
@@ -1805,16 +1406,14 @@ const generalStatus =
   );
 
 
-
 document.getElementById(
   "playerTitle"
 ).innerHTML =
-  `<span>#${player.number}</span> ${player.name}`;
+  `<span class="number">#${player.number}</span> ${player.name}`;
 
 
 document.title =
   `${player.name} | Weston Eagles Road to Pigeon Forge`;
-
 
 
 function getDonorName() {
@@ -1828,10 +1427,8 @@ function getDonorName() {
   const value =
     donorNameInput.value.trim();
 
-  return value ||
-    "Anonymous";
+  return value || "Anonymous";
 }
-
 
 
 anonymousInput.addEventListener(
@@ -1842,16 +1439,12 @@ anonymousInput.addEventListener(
       anonymousInput.checked
     ) {
 
-      donorNameInput.value =
-        "";
-
-      donorNameInput.disabled =
-        true;
+      donorNameInput.value = "";
+      donorNameInput.disabled = true;
 
     } else {
 
-      donorNameInput.disabled =
-        false;
+      donorNameInput.disabled = false;
 
     }
 
@@ -1859,28 +1452,24 @@ anonymousInput.addEventListener(
 );
 
 
-
 function formatMoney(amount) {
 
   return new Intl.NumberFormat(
     "en-US",
     {
-      style: "currency",
-      currency: "USD",
-      maximumFractionDigits: 0
+      style:"currency",
+      currency:"USD",
+      maximumFractionDigits:0
     }
   ).format(
     amount || 0
   );
-
 }
-
 
 
 function renderBaseballs() {
 
-  baseballGrid.innerHTML =
-    "";
+  baseballGrid.innerHTML = "";
 
 
   for (
@@ -1916,7 +1505,9 @@ function renderBaseballs() {
       );
 
 
-    if (soldRecord) {
+    if (
+      soldRecord
+    ) {
 
       button.classList.add(
         "sold"
@@ -1957,7 +1548,9 @@ function renderBaseballs() {
     );
 
 
-    if (!soldRecord) {
+    if (
+      !soldRecord
+    ) {
 
       button.addEventListener(
         "click",
@@ -1982,7 +1575,6 @@ function renderBaseballs() {
           }
 
           renderBaseballs();
-
           updateSelection();
 
         }
@@ -1996,7 +1588,9 @@ function renderBaseballs() {
     );
 
 
-    if (soldRecord) {
+    if (
+      soldRecord
+    ) {
 
       const donor =
         document.createElement(
@@ -2026,7 +1620,6 @@ function renderBaseballs() {
 }
 
 
-
 function updateSelection() {
 
   const baseballs =
@@ -2040,7 +1633,7 @@ function updateSelection() {
 
   const total =
     baseballs.reduce(
-      (sum, ball) =>
+      (sum,ball) =>
         sum + ball,
       0
     );
@@ -2075,23 +1668,27 @@ function updateSelection() {
 }
 
 
-
-function updateProgress(data) {
+function updateProgress(
+  data
+) {
 
   const amountRaised =
     Number(
-      data.amountRaised || 0
+      data.amountRaised ||
+      0
     );
 
   const goalAmount =
     Number(
-      data.goalAmount || 1830
+      data.goalAmount ||
+      1830
     );
 
   const progress =
     Math.min(
       Number(
-        data.progressPercent || 0
+        data.progressPercent ||
+        0
       ),
       100
     );
@@ -2122,12 +1719,9 @@ function updateProgress(data) {
     `${progress}%`;
 
 
-  const progressTrack =
-    document.getElementById(
-      "progressTrack"
-    );
-
-  progressTrack.setAttribute(
+  document.getElementById(
+    "progressTrack"
+  ).setAttribute(
     "aria-valuenow",
     String(progress)
   );
@@ -2155,7 +1749,6 @@ function updateProgress(data) {
 }
 
 
-
 async function loadFundraiser() {
 
   try {
@@ -2174,12 +1767,9 @@ async function loadFundraiser() {
           playerSlug
         )}&t=${Date.now()}`,
         {
-          cache:
-            "no-store",
-
-          headers: {
-            Accept:
-              "application/json"
+          cache:"no-store",
+          headers:{
+            Accept:"application/json"
           }
         }
       );
@@ -2249,14 +1839,15 @@ async function loadFundraiser() {
     );
 
     renderBaseballs();
-
     updateSelection();
 
 
     loadStatus.textContent =
       `${soldBalls.length} of 60 baseballs sold`;
 
-  } catch (error) {
+  } catch (
+    error
+  ) {
 
     console.error(
       error
@@ -2274,7 +1865,6 @@ async function loadFundraiser() {
 }
 
 
-
 checkoutButton.addEventListener(
   "click",
   async () => {
@@ -2288,7 +1878,9 @@ checkoutButton.addEventListener(
       );
 
 
-    if (!baseballs.length) {
+    if (
+      !baseballs.length
+    ) {
       return;
     }
 
@@ -2297,7 +1889,7 @@ checkoutButton.addEventListener(
       true;
 
     checkoutButton.textContent =
-      "CREATING CHECKOUT...";
+      "Creating Checkout...";
 
     checkoutStatus.textContent =
       "";
@@ -2309,10 +1901,9 @@ checkoutButton.addEventListener(
         await fetch(
           "/api/create-checkout",
           {
-            method:
-              "POST",
+            method:"POST",
 
-            headers: {
+            headers:{
               "Content-Type":
                 "application/json"
             },
@@ -2321,12 +1912,6 @@ checkoutButton.addEventListener(
               JSON.stringify({
                 player_slug:
                   playerSlug,
-
-                player_name:
-                  player.name,
-
-                player_number:
-                  player.number,
 
                 baseballs,
 
@@ -2345,7 +1930,8 @@ checkoutButton.addEventListener(
 
 
       if (
-        response.status === 409
+        response.status ===
+        409
       ) {
 
         const unavailable =
@@ -2390,7 +1976,9 @@ checkoutButton.addEventListener(
       window.location.href =
         data.url;
 
-    } catch (error) {
+    } catch (
+      error
+    ) {
 
       checkoutStatus.textContent =
         error.message;
@@ -2401,16 +1989,16 @@ checkoutButton.addEventListener(
 
 
       checkoutButton.disabled =
-        selectedBalls.size === 0;
+        selectedBalls.size ===
+        0;
 
       checkoutButton.textContent =
-        "CONTINUE TO SECURE CHECKOUT";
+        "Continue To Secure Checkout";
 
     }
 
   }
 );
-
 
 
 clearButton.addEventListener(
@@ -2420,7 +2008,6 @@ clearButton.addEventListener(
     selectedBalls.clear();
 
     renderBaseballs();
-
     updateSelection();
 
     checkoutStatus.textContent =
@@ -2428,7 +2015,6 @@ clearButton.addEventListener(
 
   }
 );
-
 
 
 generalDonateButton.addEventListener(
@@ -2464,7 +2050,7 @@ generalDonateButton.addEventListener(
       true;
 
     generalDonateButton.textContent =
-      "CREATING CHECKOUT...";
+      "Creating Checkout...";
 
     generalStatus.textContent =
       "";
@@ -2476,10 +2062,9 @@ generalDonateButton.addEventListener(
         await fetch(
           "/api/create-general-donation",
           {
-            method:
-              "POST",
+            method:"POST",
 
-            headers: {
+            headers:{
               "Content-Type":
                 "application/json"
             },
@@ -2488,12 +2073,6 @@ generalDonateButton.addEventListener(
               JSON.stringify({
                 player_slug:
                   playerSlug,
-
-                player_name:
-                  player.name,
-
-                player_number:
-                  player.number,
 
                 amount,
 
@@ -2527,7 +2106,9 @@ generalDonateButton.addEventListener(
       window.location.href =
         data.url;
 
-    } catch (error) {
+    } catch (
+      error
+    ) {
 
       generalStatus.textContent =
         error.message;
@@ -2541,13 +2122,12 @@ generalDonateButton.addEventListener(
         false;
 
       generalDonateButton.textContent =
-        "MAKE GENERAL DONATION";
+        "Make General Donation";
 
     }
 
   }
 );
-
 
 
 function handlePaymentReturn() {
@@ -2580,7 +2160,6 @@ function handlePaymentReturn() {
       1500
     );
 
-
     setTimeout(
       loadFundraiser,
       3500
@@ -2605,11 +2184,8 @@ function handlePaymentReturn() {
 }
 
 
-
 handlePaymentReturn();
-
 loadFundraiser();
-
 updateSelection();
 
 
@@ -2637,7 +2213,5 @@ document.addEventListener(
 
 </script>
 
-
 </body>
-
 </html>
