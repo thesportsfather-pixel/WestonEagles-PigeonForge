@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -10,65 +8,43 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    Weston Eagles | Road to Pigeon Forge
-  </title>
+  <title>Weston Eagles | Road to Pigeon Forge</title>
 
   <meta
     name="description"
-    content="Support the Weston Eagles on their Road to Pigeon Forge. Select a player to visit their fundraiser page."
+    content="Support the Weston Eagles on their Road to Pigeon Forge and the Ripken Experience."
   >
 
   <style>
 
     :root {
-      --navy:#07184a;
-      --navy2:#0b255f;
-      --silver:#c9ced8;
-      --silver2:#eef1f5;
+      --navy:#05133f;
+      --navy-bright:#103b91;
+      --blue:#1c53b5;
+      --silver:#cbd1da;
+      --silver-light:#f3f5f8;
       --white:#ffffff;
-      --black:#05070b;
-      --charcoal:#0c1017;
-      --card:#111722;
-      --muted:#9098a7;
+      --black:#03050a;
+      --charcoal:#090d15;
+      --card:#0e1522;
+      --muted:#98a1b1;
     }
 
     * {
       box-sizing:border-box;
     }
 
+    html {
+      scroll-behavior:smooth;
+    }
+
     body {
-
       margin:0;
-
       min-height:100vh;
-
-      color:var(--white);
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      background:
-
-        radial-gradient(
-          circle at 15% 0%,
-          rgba(22,61,143,.30),
-          transparent 30%
-        ),
-
-        radial-gradient(
-          circle at 90% 10%,
-          rgba(201,206,216,.12),
-          transparent 30%
-        ),
-
-        linear-gradient(
-          180deg,
-          #070b14 0%,
-          #05070b 100%
-        );
+      color:#fff;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#03050a;
+      overflow-x:hidden;
     }
 
     a {
@@ -76,621 +52,745 @@
       text-decoration:none;
     }
 
-    .page {
+    /* ========================================
+       BACKGROUND
+    ======================================== */
 
-      width:100%;
-      max-width:1180px;
-
-      margin:0 auto;
-
-      padding:
-        28px
-        20px
-        60px;
-    }
-
-    .hero {
-
-      position:relative;
-
-      overflow:hidden;
-
-      padding:
-        38px
-        24px
-        40px;
-
-      text-align:center;
-
-      border:
-        1px solid
-        rgba(255,255,255,.08);
-
-      border-radius:24px;
-
-      background:
-
-        radial-gradient(
-          circle at 10% 0%,
-          rgba(22,61,143,.38),
-          transparent 30%
-        ),
-
-        radial-gradient(
-          circle at 90% 20%,
-          rgba(201,206,216,.13),
-          transparent 30%
-        ),
-
-        linear-gradient(
-          145deg,
-          #111826 0%,
-          #090d14 55%,
-          #05070b 100%
-        );
-
-      box-shadow:
-        0 26px 60px
-        rgba(0,0,0,.35);
-    }
-
-    .hero:after {
-
+    body::before {
       content:"";
-
-      position:absolute;
-
-      left:-10%;
-      right:-10%;
-      bottom:-120px;
-
-      height:260px;
-
-      opacity:.35;
+      position:fixed;
+      inset:0;
+      z-index:-5;
 
       background:
 
-        linear-gradient(
-          145deg,
-          transparent 0 23%,
-          #1a2230 23.5% 39%,
-          transparent 39.5%
+        radial-gradient(
+          circle at 20% 10%,
+          rgba(28,83,181,.30),
+          transparent 32%
+        ),
+
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(203,209,218,.14),
+          transparent 30%
         ),
 
         linear-gradient(
-          215deg,
-          transparent 0 34%,
-          #141b27 34.5% 52%,
-          transparent 52.5%
+          180deg,
+          #071027 0%,
+          #050912 42%,
+          #03050a 100%
+        );
+    }
+
+    body::after {
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-4;
+      opacity:.18;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
         );
 
+      background-size:38px 38px;
       pointer-events:none;
     }
 
-    .logo {
-
-      position:relative;
-
-      z-index:2;
-
-      width:
-        min(
-          210px,
-          50vw
-        );
-
-      max-height:160px;
-
-      object-fit:contain;
-
-      filter:
-        drop-shadow(
-          0 10px 22px
-          rgba(0,0,0,.45)
-        );
+    .page {
+      width:100%;
+      max-width:1280px;
+      margin:0 auto;
+      padding:18px 18px 70px;
     }
 
-    .kicker {
+    /* ========================================
+       HERO
+    ======================================== */
 
+    .hero {
       position:relative;
+      min-height:610px;
+      overflow:hidden;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.10);
 
-      z-index:2;
+      background:
 
-      margin-top:8px;
+        radial-gradient(
+          circle at 18% 20%,
+          rgba(24,74,166,.55),
+          transparent 34%
+        ),
 
-      color:
-        var(--silver);
+        radial-gradient(
+          circle at 78% 20%,
+          rgba(255,255,255,.09),
+          transparent 28%
+        ),
+
+        linear-gradient(
+          135deg,
+          #091b4a 0%,
+          #071127 42%,
+          #050811 100%
+        );
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.48),
+        inset 0 1px 0 rgba(255,255,255,.08);
+    }
+
+    .hero-glow {
+      position:absolute;
+      width:500px;
+      height:500px;
+      border-radius:50%;
+      top:-220px;
+      left:-130px;
+      background:rgba(34,87,191,.30);
+      filter:blur(80px);
+    }
+
+    .mountain {
+      position:absolute;
+      left:-5%;
+      right:-5%;
+      bottom:-1px;
+      height:310px;
+      pointer-events:none;
+    }
+
+    .mountain::before {
+      content:"";
+      position:absolute;
+      inset:0;
+
+      background:#101725;
+
+      clip-path:polygon(
+        0% 100%,
+        0% 72%,
+        10% 61%,
+        19% 73%,
+        31% 40%,
+        42% 68%,
+        53% 33%,
+        63% 64%,
+        73% 45%,
+        84% 67%,
+        93% 51%,
+        100% 67%,
+        100% 100%
+      );
+    }
+
+    .mountain::after {
+      content:"";
+      position:absolute;
+      inset:65px 0 0;
+
+      background:#080d16;
+
+      clip-path:polygon(
+        0% 100%,
+        0% 72%,
+        12% 58%,
+        22% 70%,
+        34% 51%,
+        45% 73%,
+        57% 43%,
+        69% 69%,
+        80% 55%,
+        91% 75%,
+        100% 64%,
+        100% 100%
+      );
+    }
+
+    .hero-content {
+      position:relative;
+      z-index:3;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      min-height:610px;
+      align-items:center;
+      padding:55px 58px 140px;
+      gap:30px;
+    }
+
+    .hero-left {
+      max-width:720px;
+    }
+
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+
+      padding:8px 13px;
+
+      border:1px solid rgba(255,255,255,.13);
+      border-radius:999px;
+
+      color:var(--silver);
+      background:rgba(255,255,255,.05);
 
       font-size:10px;
-
       font-weight:900;
-
-      letter-spacing:3px;
-
+      letter-spacing:2.2px;
       text-transform:uppercase;
+    }
+
+    .eyebrow::before {
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#fff;
+      box-shadow:0 0 12px #7fa5ff;
     }
 
     h1 {
-
-      position:relative;
-
-      z-index:2;
-
-      margin:
-        10px
-        0
-        0;
-
-      font-size:
-        clamp(
-          42px,
-          8vw,
-          84px
-        );
-
-      line-height:.9;
-
+      margin:20px 0 0;
+      font-size:clamp(56px,8vw,105px);
+      line-height:.82;
+      letter-spacing:-5px;
       font-weight:950;
-
-      letter-spacing:-3px;
-
       text-transform:uppercase;
     }
 
-    h1 span {
-
+    h1 .road {
       display:block;
+      color:#fff;
+    }
 
-      margin-top:8px;
-
-      color:
-        var(--silver2);
+    h1 .pigeon {
+      display:block;
+      margin-top:10px;
+      color:var(--silver-light);
 
       text-shadow:
-        2px 2px 0
-        var(--navy2);
+        3px 3px 0 #0a2b6f,
+        0 0 30px rgba(85,136,255,.20);
     }
 
-    .hero p {
-
-      position:relative;
-
-      z-index:2;
-
-      max-width:700px;
-
-      margin:
-        20px
-        auto
-        0;
-
-      color:#aeb5c1;
-
-      font-size:14px;
-
-      line-height:1.6;
+    .hero-copy {
+      max-width:600px;
+      margin-top:25px;
+      color:#b8c0ce;
+      font-size:15px;
+      line-height:1.7;
     }
 
-    .stats {
+    .hero-button {
+      display:inline-flex;
+      align-items:center;
+      gap:11px;
 
-      display:grid;
+      margin-top:25px;
+      padding:15px 22px;
 
-      grid-template-columns:
-        repeat(
-          3,
-          1fr
+      border-radius:12px;
+
+      background:
+        linear-gradient(
+          110deg,
+          #16439d,
+          #7183a7
         );
 
-      gap:12px;
+      color:#fff;
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:1.3px;
+      text-transform:uppercase;
 
-      margin-top:18px;
+      box-shadow:
+        0 12px 30px rgba(10,50,130,.32);
+    }
+
+    .hero-logo-wrap {
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .hero-logo-wrap::before {
+      content:"";
+      position:absolute;
+      width:360px;
+      height:360px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.07);
+
+      box-shadow:
+        0 0 0 35px rgba(255,255,255,.018),
+        0 0 0 70px rgba(255,255,255,.012);
+    }
+
+    .hero-logo {
+      position:relative;
+      z-index:2;
+      width:min(350px,75vw);
+      max-height:330px;
+      object-fit:contain;
+
+      filter:
+        drop-shadow(0 22px 35px rgba(0,0,0,.55))
+        drop-shadow(0 0 25px rgba(83,123,220,.20));
+    }
+
+    /* ========================================
+       STATS
+    ======================================== */
+
+    .stats {
+      position:relative;
+      z-index:5;
+
+      width:calc(100% - 90px);
+      margin:-70px auto 0;
+
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:18px;
+      overflow:hidden;
+
+      background:rgba(12,17,27,.94);
+      backdrop-filter:blur(14px);
+
+      box-shadow:
+        0 22px 45px rgba(0,0,0,.35);
     }
 
     .stat {
-
-      padding:
-        18px
-        10px;
-
+      padding:23px 15px;
       text-align:center;
+      border-right:1px solid rgba(255,255,255,.07);
+    }
 
-      border:
-        1px solid
-        rgba(255,255,255,.08);
-
-      border-radius:15px;
-
-      background:
-        rgba(17,23,34,.86);
+    .stat:last-child {
+      border-right:0;
     }
 
     .stat strong {
-
       display:block;
-
-      color:
-        var(--silver2);
-
-      font-size:25px;
-
+      font-size:31px;
       font-weight:950;
+      color:#fff;
     }
 
     .stat span {
-
       display:block;
-
-      margin-top:4px;
-
-      color:#858d9a;
-
+      margin-top:5px;
+      color:#808998;
       font-size:9px;
-
       font-weight:900;
-
-      letter-spacing:1.5px;
-
+      letter-spacing:1.8px;
       text-transform:uppercase;
     }
 
-    .section {
+    /* ========================================
+       PLAYER SECTION
+    ======================================== */
 
-      margin-top:34px;
+    .players-section {
+      margin-top:65px;
+    }
+
+    .section-heading {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:20px;
+      margin-bottom:22px;
     }
 
     .section-kicker {
-
-      color:
-        var(--silver);
-
+      color:#9ba7bb;
       font-size:9px;
-
       font-weight:900;
-
-      letter-spacing:2px;
-
+      letter-spacing:2.5px;
       text-transform:uppercase;
     }
 
-    .section-title {
-
-      margin:
-        5px
-        0
-        8px;
-
-      font-size:
-        clamp(
-          27px,
-          5vw,
-          42px
-        );
-
-      line-height:1;
-
-      font-weight:950;
-
+    .section-heading h2 {
+      margin:7px 0 0;
+      font-size:clamp(34px,5vw,58px);
+      line-height:.95;
+      letter-spacing:-2px;
       text-transform:uppercase;
     }
 
-    .section-text {
-
-      max-width:700px;
-
-      margin:0;
-
-      color:#8d95a2;
-
-      font-size:13px;
-
-      line-height:1.55;
+    .section-copy {
+      max-width:440px;
+      color:#848d9b;
+      font-size:12px;
+      line-height:1.6;
+      text-align:right;
     }
+
+    /* ========================================
+       PLAYER GRID
+    ======================================== */
 
     .player-grid {
-
       display:grid;
-
-      grid-template-columns:
-        repeat(
-          3,
-          1fr
-        );
-
-      gap:14px;
-
-      margin-top:20px;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
     }
 
     .player-card {
-
       position:relative;
-
+      min-height:190px;
       overflow:hidden;
+      padding:24px;
+      border-radius:19px;
 
-      min-height:145px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:space-between;
-
-      gap:15px;
-
-      padding:
-        22px;
-
-      border:
-        1px solid
-        rgba(255,255,255,.08);
-
-      border-radius:17px;
+      border:1px solid rgba(255,255,255,.08);
 
       background:
 
+        radial-gradient(
+          circle at 90% 0%,
+          rgba(35,86,188,.22),
+          transparent 32%
+        ),
+
         linear-gradient(
           145deg,
-          rgba(17,23,34,.96),
-          rgba(7,11,18,.96)
+          #111927,
+          #080c14
         );
 
       box-shadow:
-        0 14px 28px
-        rgba(0,0,0,.24);
+        0 14px 32px rgba(0,0,0,.23);
 
       transition:
-        transform .18s ease,
-        border-color .18s ease,
-        box-shadow .18s ease;
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .player-card::after {
+      content:"";
+      position:absolute;
+      width:155px;
+      height:155px;
+      border-radius:50%;
+      right:-52px;
+      bottom:-60px;
+
+      border:1px solid rgba(255,255,255,.06);
+
+      box-shadow:
+        0 0 0 20px rgba(255,255,255,.018),
+        0 0 0 40px rgba(255,255,255,.010);
     }
 
     .player-card:hover {
-
-      transform:
-        translateY(-4px);
-
-      border-color:
-        rgba(201,206,216,.35);
+      transform:translateY(-6px);
+      border-color:rgba(153,177,235,.40);
 
       box-shadow:
-        0 20px 36px
-        rgba(0,0,0,.34);
+        0 22px 42px rgba(0,0,0,.36),
+        0 0 28px rgba(24,65,155,.10);
     }
 
-    .player-number {
+    .number-badge {
+      display:flex;
+      align-items:center;
+      justify-content:center;
 
-      min-width:66px;
+      width:62px;
+      height:62px;
+      border-radius:50%;
 
-      color:
-        var(--silver2);
+      color:#08235f;
 
-      font-size:42px;
+      background:
+        radial-gradient(
+          circle at 35% 25%,
+          #fff 0%,
+          #f2f3f5 55%,
+          #bcc2cb 100%
+        );
 
-      line-height:1;
+      border:2px solid #d3d7de;
 
+      font-size:22px;
       font-weight:950;
 
-      text-shadow:
-        2px 2px 0
-        var(--navy2);
+      box-shadow:
+        0 8px 18px rgba(0,0,0,.30);
     }
 
-    .player-info {
-
-      flex:1;
-    }
-
-    .player-info small {
-
+    .player-card small {
       display:block;
-
-      margin-bottom:5px;
-
-      color:
-        var(--silver);
-
+      margin-top:18px;
+      color:#7089c2;
       font-size:8px;
-
       font-weight:900;
-
-      letter-spacing:1.6px;
-
+      letter-spacing:2px;
       text-transform:uppercase;
     }
 
     .player-name {
-
-      font-size:20px;
-
-      line-height:1.05;
-
+      margin-top:5px;
+      padding-right:35px;
+      font-size:21px;
+      line-height:1.02;
       font-weight:950;
-
       text-transform:uppercase;
     }
 
-    .player-cta {
-
-      margin-top:8px;
-
-      color:#8d95a2;
-
+    .support {
+      margin-top:10px;
+      color:#8c94a2;
       font-size:10px;
-
       font-weight:800;
     }
 
     .arrow {
+      position:absolute;
+      right:20px;
+      top:22px;
 
-      color:
-        var(--silver);
+      display:flex;
+      align-items:center;
+      justify-content:center;
 
-      font-size:24px;
+      width:37px;
+      height:37px;
 
-      font-weight:900;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.10);
+
+      color:#dce1e8;
+      background:rgba(255,255,255,.04);
+
+      font-size:22px;
     }
 
-    .how-it-works {
+    /* ========================================
+       HOW IT WORKS
+    ======================================== */
 
-      display:grid;
+    .how-section {
+      margin-top:70px;
+      padding:38px;
 
-      grid-template-columns:
-        repeat(
-          3,
-          1fr
+      border-radius:23px;
+      border:1px solid rgba(255,255,255,.08);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(11,25,60,.75),
+          rgba(8,12,20,.96)
         );
+    }
 
-      gap:12px;
+    .how-section h2 {
+      margin:5px 0 25px;
+      font-size:35px;
+      text-transform:uppercase;
+    }
 
-      margin-top:18px;
+    .steps {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:13px;
     }
 
     .step {
-
-      padding:
-        20px;
-
-      border:
-        1px solid
-        rgba(255,255,255,.08);
-
+      padding:23px;
       border-radius:15px;
-
-      background:
-        rgba(17,23,34,.82);
+      border:1px solid rgba(255,255,255,.07);
+      background:rgba(255,255,255,.035);
     }
 
     .step-number {
-
-      color:
-        var(--silver);
-
-      font-size:24px;
-
+      color:#9fb4e6;
+      font-size:30px;
       font-weight:950;
     }
 
     .step h3 {
-
-      margin:
-        8px
-        0
-        6px;
-
-      font-size:15px;
-
-      font-weight:950;
-
+      margin:10px 0 7px;
+      font-size:16px;
       text-transform:uppercase;
     }
 
     .step p {
-
       margin:0;
-
-      color:#858d9a;
-
+      color:#848d9c;
       font-size:11px;
-
-      line-height:1.5;
+      line-height:1.55;
     }
 
     .footer {
-
-      margin-top:34px;
-
-      padding-top:22px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,.08);
-
+      margin-top:45px;
       text-align:center;
-
-      color:#686f7c;
-
-      font-size:10px;
+      color:#4f5866;
+      font-size:9px;
+      letter-spacing:2px;
+      font-weight:900;
+      text-transform:uppercase;
     }
+
+    /* ========================================
+       MOBILE
+    ======================================== */
 
     @media(max-width:900px) {
 
-      .player-grid {
-        grid-template-columns:
-          repeat(
-            2,
-            1fr
-          );
+      .hero-content {
+        grid-template-columns:1fr;
+        padding:40px 28px 150px;
+        text-align:center;
       }
 
+      .hero-left {
+        margin:0 auto;
+      }
+
+      .hero-copy {
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero-logo-wrap {
+        margin-top:10px;
+      }
+
+      .hero-logo {
+        width:250px;
+      }
+
+      .player-grid {
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .section-heading {
+        display:block;
+      }
+
+      .section-copy {
+        margin-top:13px;
+        text-align:left;
+      }
     }
 
-    @media(max-width:650px) {
+    @media(max-width:620px) {
 
       .page {
-        padding:
-          14px
-          10px
-          40px;
+        padding:8px 8px 40px;
       }
 
       .hero {
-        padding:
-          28px
-          15px
-          30px;
+        min-height:auto;
+        border-radius:19px;
+      }
+
+      .hero-content {
+        min-height:auto;
+        padding:35px 18px 125px;
+      }
+
+      h1 {
+        font-size:52px;
+        letter-spacing:-3px;
+      }
+
+      .hero-logo {
+        width:205px;
       }
 
       .stats {
-        grid-template-columns:1fr;
+        width:calc(100% - 26px);
+        margin-top:-55px;
+      }
+
+      .stat {
+        padding:18px 6px;
+      }
+
+      .stat strong {
+        font-size:24px;
+      }
+
+      .stat span {
+        font-size:7px;
+        letter-spacing:1px;
+      }
+
+      .players-section {
+        margin-top:48px;
       }
 
       .player-grid {
-        grid-template-columns:
-          repeat(
-            2,
-            1fr
-          );
-
+        grid-template-columns:repeat(2,1fr);
         gap:9px;
       }
 
       .player-card {
-
-        min-height:130px;
-
-        display:block;
-
-        padding:
-          16px
-          12px;
+        min-height:170px;
+        padding:15px 12px;
       }
 
-      .player-number {
+      .number-badge {
+        width:51px;
+        height:51px;
+        font-size:18px;
+      }
 
-        min-width:auto;
-
-        margin-bottom:10px;
-
-        font-size:34px;
+      .player-card small {
+        margin-top:15px;
+        font-size:6px;
       }
 
       .player-name {
-        font-size:15px;
+        font-size:14px;
+        padding-right:0;
+      }
+
+      .support {
+        font-size:8px;
       }
 
       .arrow {
-        display:none;
+        width:30px;
+        height:30px;
+        right:10px;
+        top:12px;
       }
 
-      .how-it-works {
+      .how-section {
+        padding:25px 14px;
+      }
+
+      .steps {
         grid-template-columns:1fr;
       }
-
     }
 
   </style>
-
 </head>
+
 
 <body>
 
@@ -698,26 +798,49 @@
 
   <section class="hero">
 
-    <img
-      src="/weston-eagles-logo.png"
-      alt="Weston Eagles"
-      class="logo"
-    >
+    <div class="hero-glow"></div>
+    <div class="mountain"></div>
 
-    <div class="kicker">
-      WESTON EAGLES BASEBALL
+    <div class="hero-content">
+
+      <div class="hero-left">
+
+        <div class="eyebrow">
+          Weston Eagles Baseball
+        </div>
+
+        <h1>
+          <span class="road">Road To</span>
+          <span class="pigeon">Pigeon Forge</span>
+        </h1>
+
+        <p class="hero-copy">
+          Help the Weston Eagles take on the Ripken Experience
+          in Pigeon Forge, Tennessee. Choose a player, pick your
+          baseballs and become part of their journey.
+        </p>
+
+        <a
+          href="#players"
+          class="hero-button"
+        >
+          Choose A Player ↓
+        </a>
+
+      </div>
+
+
+      <div class="hero-logo-wrap">
+
+        <img
+          src="/weston-eagles-logo.png"
+          alt="Weston Eagles"
+          class="hero-logo"
+        >
+
+      </div>
+
     </div>
-
-    <h1>
-      ROAD TO
-      <span>PIGEON FORGE</span>
-    </h1>
-
-    <p>
-      Help the Weston Eagles on their journey to the
-      Ripken Experience in Pigeon Forge, Tennessee.
-      Select a player below to support their fundraiser.
-    </p>
 
   </section>
 
@@ -726,7 +849,7 @@
 
     <div class="stat">
       <strong>13</strong>
-      <span>Players</span>
+      <span>Weston Eagles Players</span>
     </div>
 
     <div class="stat">
@@ -736,341 +859,157 @@
 
     <div class="stat">
       <strong>$1–$60</strong>
-      <span>Baseball Values</span>
+      <span>Choose Your Donation</span>
     </div>
 
   </div>
 
 
-  <section class="section">
+  <section
+    class="players-section"
+    id="players"
+  >
 
-    <div class="section-kicker">
-      CHOOSE YOUR PLAYER
+    <div class="section-heading">
+
+      <div>
+
+        <div class="section-kicker">
+          Pick Your Eagle
+        </div>
+
+        <h2>
+          Support A Player
+        </h2>
+
+      </div>
+
+      <div class="section-copy">
+        Every player has 60 baseballs. The number printed
+        on the baseball is the donation amount. Select a player
+        below to get started.
+      </div>
+
     </div>
-
-    <h2 class="section-title">
-      SUPPORT THE EAGLES
-    </h2>
-
-    <p class="section-text">
-      Each player has 60 baseballs available.
-      The number on the baseball equals the donation amount.
-      Click a player below to visit their individual fundraiser.
-    </p>
 
 
     <div class="player-grid">
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=cooper-sweetland"
-      >
-        <div class="player-number">
-          #2
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Cooper Sweetland
-          </div>
-          <div class="player-cta">
-            Support Cooper
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=cooper-sweetland">
+        <div class="number-badge">2</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Cooper Sweetland</div>
+        <div class="support">Support Cooper →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=greg-snyder"
-      >
-        <div class="player-number">
-          #3
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Greg Snyder
-          </div>
-          <div class="player-cta">
-            Support Greg
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=greg-snyder">
+        <div class="number-badge">3</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Greg Snyder</div>
+        <div class="support">Support Greg →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=easton-mores"
-      >
-        <div class="player-number">
-          #4
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Easton Mores
-          </div>
-          <div class="player-cta">
-            Support Easton
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=easton-mores">
+        <div class="number-badge">4</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Easton Mores</div>
+        <div class="support">Support Easton →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=sebastian-eustice"
-      >
-        <div class="player-number">
-          #5
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Sebastian Eustice
-          </div>
-          <div class="player-cta">
-            Support Sebastian
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=sebastian-eustice">
+        <div class="number-badge">5</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Sebastian Eustice</div>
+        <div class="support">Support Sebastian →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=michael-harris"
-      >
-        <div class="player-number">
-          #7
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Michael Harris
-          </div>
-          <div class="player-cta">
-            Support Michael
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=michael-harris">
+        <div class="number-badge">7</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Michael Harris</div>
+        <div class="support">Support Michael →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=hudson-tenn"
-      >
-        <div class="player-number">
-          #10
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Hudson Tenn
-          </div>
-          <div class="player-cta">
-            Support Hudson
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=hudson-tenn">
+        <div class="number-badge">10</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Hudson Tenn</div>
+        <div class="support">Support Hudson →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=austin-shin"
-      >
-        <div class="player-number">
-          #17
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Austin Shin
-          </div>
-          <div class="player-cta">
-            Support Austin
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=austin-shin">
+        <div class="number-badge">17</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Austin Shin</div>
+        <div class="support">Support Austin →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=diego-ventura"
-      >
-        <div class="player-number">
-          #22
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Diego Ventura
-          </div>
-          <div class="player-cta">
-            Support Diego
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=diego-ventura">
+        <div class="number-badge">22</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Diego Ventura</div>
+        <div class="support">Support Diego →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=dylan-pimentel"
-      >
-        <div class="player-number">
-          #23
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Dylan Pimentel
-          </div>
-          <div class="player-cta">
-            Support Dylan
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=dylan-pimentel">
+        <div class="number-badge">23</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Dylan Pimentel</div>
+        <div class="support">Support Dylan →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=jose-machado"
-      >
-        <div class="player-number">
-          #24
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Jose Machado
-          </div>
-          <div class="player-cta">
-            Support Jose
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=jose-machado">
+        <div class="number-badge">24</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Jose Machado</div>
+        <div class="support">Support Jose →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=massimo-iacona"
-      >
-        <div class="player-number">
-          #25
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Massimo Iacona
-          </div>
-          <div class="player-cta">
-            Support Massimo
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=massimo-iacona">
+        <div class="number-badge">25</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Massimo Iacona</div>
+        <div class="support">Support Massimo →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=oliver-zorrilla"
-      >
-        <div class="player-number">
-          #44
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Oliver Zorrilla
-          </div>
-          <div class="player-cta">
-            Support Oliver
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=oliver-zorrilla">
+        <div class="number-badge">44</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Oliver Zorrilla</div>
+        <div class="support">Support Oliver →</div>
       </a>
 
 
-      <a
-        class="player-card"
-        href="/fundraiser.html?player=axel-damico"
-      >
-        <div class="player-number">
-          #99
-        </div>
-
-        <div class="player-info">
-          <small>Weston Eagles</small>
-          <div class="player-name">
-            Axel D'Amico
-          </div>
-          <div class="player-cta">
-            Support Axel
-          </div>
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
+      <a class="player-card" href="/fundraiser.html?player=axel-damico">
+        <div class="number-badge">99</div>
+        <div class="arrow">›</div>
+        <small>Weston Eagles</small>
+        <div class="player-name">Axel D'Amico</div>
+        <div class="support">Support Axel →</div>
       </a>
 
 
@@ -1079,70 +1018,43 @@
   </section>
 
 
-  <section class="section">
+  <section class="how-section">
 
     <div class="section-kicker">
-      HOW IT WORKS
+      The Fundraiser
     </div>
 
-    <h2 class="section-title">
-      PICK. DONATE. SUPPORT.
+    <h2>
+      How It Works
     </h2>
 
 
-    <div class="how-it-works">
+    <div class="steps">
 
       <div class="step">
-
-        <div class="step-number">
-          01
-        </div>
-
-        <h3>
-          Select a Player
-        </h3>
-
+        <div class="step-number">01</div>
+        <h3>Choose Your Player</h3>
         <p>
-          Choose the Weston Eagles player you would
-          like to support.
+          Select the Weston Eagles player you want to support.
         </p>
-
       </div>
 
 
       <div class="step">
-
-        <div class="step-number">
-          02
-        </div>
-
-        <h3>
-          Pick Baseballs
-        </h3>
-
+        <div class="step-number">02</div>
+        <h3>Pick Baseballs</h3>
         <p>
-          Each baseball is worth its number.
-          Baseball #25 equals a $25 donation.
+          Each baseball equals its number. Ball #40 is a $40 donation.
         </p>
-
       </div>
 
 
       <div class="step">
-
-        <div class="step-number">
-          03
-        </div>
-
-        <h3>
-          Complete Checkout
-        </h3>
-
+        <div class="step-number">03</div>
+        <h3>Help Them Get There</h3>
         <p>
-          Finish your secure donation and help the team
-          on their Road to Pigeon Forge.
+          Complete secure checkout and support the team's Road to Pigeon Forge.
         </p>
-
       </div>
 
     </div>
@@ -1151,11 +1063,10 @@
 
 
   <div class="footer">
-    WESTON EAGLES BASEBALL • ROAD TO PIGEON FORGE
+    Weston Eagles Baseball • Road to Pigeon Forge • Ripken Experience
   </div>
 
 </div>
 
 </body>
-
 </html>
