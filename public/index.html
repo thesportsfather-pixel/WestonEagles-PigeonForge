@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Weston Eagles | Road to Pigeon Forge
+  </title>
+
+  <meta
+    name="description"
+    content="Support the Weston Eagles on their Road to Pigeon Forge. Select a player to visit their fundraiser page."
+  >
+
+  <style>
+
+    :root {
+      --navy:#07184a;
+      --navy2:#0b255f;
+      --silver:#c9ced8;
+      --silver2:#eef1f5;
+      --white:#ffffff;
+      --black:#05070b;
+      --charcoal:#0c1017;
+      --card:#111722;
+      --muted:#9098a7;
+    }
+
+    * {
+      box-sizing:border-box;
+    }
+
+    body {
+
+      margin:0;
+
+      min-height:100vh;
+
+      color:var(--white);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background:
+
+        radial-gradient(
+          circle at 15% 0%,
+          rgba(22,61,143,.30),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(201,206,216,.12),
+          transparent 30%
+        ),
+
+        linear-gradient(
+          180deg,
+          #070b14 0%,
+          #05070b 100%
+        );
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .page {
+
+      width:100%;
+      max-width:1180px;
+
+      margin:0 auto;
+
+      padding:
+        28px
+        20px
+        60px;
+    }
+
+    .hero {
+
+      position:relative;
+
+      overflow:hidden;
+
+      padding:
+        38px
+        24px
+        40px;
+
+      text-align:center;
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      border-radius:24px;
+
+      background:
+
+        radial-gradient(
+          circle at 10% 0%,
+          rgba(22,61,143,.38),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(201,206,216,.13),
+          transparent 30%
+        ),
+
+        linear-gradient(
+          145deg,
+          #111826 0%,
+          #090d14 55%,
+          #05070b 100%
+        );
+
+      box-shadow:
+        0 26px 60px
+        rgba(0,0,0,.35);
+    }
+
+    .hero:after {
+
+      content:"";
+
+      position:absolute;
+
+      left:-10%;
+      right:-10%;
+      bottom:-120px;
+
+      height:260px;
+
+      opacity:.35;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          transparent 0 23%,
+          #1a2230 23.5% 39%,
+          transparent 39.5%
+        ),
+
+        linear-gradient(
+          215deg,
+          transparent 0 34%,
+          #141b27 34.5% 52%,
+          transparent 52.5%
+        );
+
+      pointer-events:none;
+    }
+
+    .logo {
+
+      position:relative;
+
+      z-index:2;
+
+      width:
+        min(
+          210px,
+          50vw
+        );
+
+      max-height:160px;
+
+      object-fit:contain;
+
+      filter:
+        drop-shadow(
+          0 10px 22px
+          rgba(0,0,0,.45)
+        );
+    }
+
+    .kicker {
+
+      position:relative;
+
+      z-index:2;
+
+      margin-top:8px;
+
+      color:
+        var(--silver);
+
+      font-size:10px;
+
+      font-weight:900;
+
+      letter-spacing:3px;
+
+      text-transform:uppercase;
+    }
+
+    h1 {
+
+      position:relative;
+
+      z-index:2;
+
+      margin:
+        10px
+        0
+        0;
+
+      font-size:
+        clamp(
+          42px,
+          8vw,
+          84px
+        );
+
+      line-height:.9;
+
+      font-weight:950;
+
+      letter-spacing:-3px;
+
+      text-transform:uppercase;
+    }
+
+    h1 span {
+
+      display:block;
+
+      margin-top:8px;
+
+      color:
+        var(--silver2);
+
+      text-shadow:
+        2px 2px 0
+        var(--navy2);
+    }
+
+    .hero p {
+
+      position:relative;
+
+      z-index:2;
+
+      max-width:700px;
+
+      margin:
+        20px
+        auto
+        0;
+
+      color:#aeb5c1;
+
+      font-size:14px;
+
+      line-height:1.6;
+    }
+
+    .stats {
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap:12px;
+
+      margin-top:18px;
+    }
+
+    .stat {
+
+      padding:
+        18px
+        10px;
+
+      text-align:center;
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      border-radius:15px;
+
+      background:
+        rgba(17,23,34,.86);
+    }
+
+    .stat strong {
+
+      display:block;
+
+      color:
+        var(--silver2);
+
+      font-size:25px;
+
+      font-weight:950;
+    }
+
+    .stat span {
+
+      display:block;
+
+      margin-top:4px;
+
+      color:#858d9a;
+
+      font-size:9px;
+
+      font-weight:900;
+
+      letter-spacing:1.5px;
+
+      text-transform:uppercase;
+    }
+
+    .section {
+
+      margin-top:34px;
+    }
+
+    .section-kicker {
+
+      color:
+        var(--silver);
+
+      font-size:9px;
+
+      font-weight:900;
+
+      letter-spacing:2px;
+
+      text-transform:uppercase;
+    }
+
+    .section-title {
+
+      margin:
+        5px
+        0
+        8px;
+
+      font-size:
+        clamp(
+          27px,
+          5vw,
+          42px
+        );
+
+      line-height:1;
+
+      font-weight:950;
+
+      text-transform:uppercase;
+    }
+
+    .section-text {
+
+      max-width:700px;
+
+      margin:0;
+
+      color:#8d95a2;
+
+      font-size:13px;
+
+      line-height:1.55;
+    }
+
+    .player-grid {
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap:14px;
+
+      margin-top:20px;
+    }
+
+    .player-card {
+
+      position:relative;
+
+      overflow:hidden;
+
+      min-height:145px;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:space-between;
+
+      gap:15px;
+
+      padding:
+        22px;
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      border-radius:17px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(17,23,34,.96),
+          rgba(7,11,18,.96)
+        );
+
+      box-shadow:
+        0 14px 28px
+        rgba(0,0,0,.24);
+
+      transition:
+        transform .18s ease,
+        border-color .18s ease,
+        box-shadow .18s ease;
+    }
+
+    .player-card:hover {
+
+      transform:
+        translateY(-4px);
+
+      border-color:
+        rgba(201,206,216,.35);
+
+      box-shadow:
+        0 20px 36px
+        rgba(0,0,0,.34);
+    }
+
+    .player-number {
+
+      min-width:66px;
+
+      color:
+        var(--silver2);
+
+      font-size:42px;
+
+      line-height:1;
+
+      font-weight:950;
+
+      text-shadow:
+        2px 2px 0
+        var(--navy2);
+    }
+
+    .player-info {
+
+      flex:1;
+    }
+
+    .player-info small {
+
+      display:block;
+
+      margin-bottom:5px;
+
+      color:
+        var(--silver);
+
+      font-size:8px;
+
+      font-weight:900;
+
+      letter-spacing:1.6px;
+
+      text-transform:uppercase;
+    }
+
+    .player-name {
+
+      font-size:20px;
+
+      line-height:1.05;
+
+      font-weight:950;
+
+      text-transform:uppercase;
+    }
+
+    .player-cta {
+
+      margin-top:8px;
+
+      color:#8d95a2;
+
+      font-size:10px;
+
+      font-weight:800;
+    }
+
+    .arrow {
+
+      color:
+        var(--silver);
+
+      font-size:24px;
+
+      font-weight:900;
+    }
+
+    .how-it-works {
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap:12px;
+
+      margin-top:18px;
+    }
+
+    .step {
+
+      padding:
+        20px;
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      border-radius:15px;
+
+      background:
+        rgba(17,23,34,.82);
+    }
+
+    .step-number {
+
+      color:
+        var(--silver);
+
+      font-size:24px;
+
+      font-weight:950;
+    }
+
+    .step h3 {
+
+      margin:
+        8px
+        0
+        6px;
+
+      font-size:15px;
+
+      font-weight:950;
+
+      text-transform:uppercase;
+    }
+
+    .step p {
+
+      margin:0;
+
+      color:#858d9a;
+
+      font-size:11px;
+
+      line-height:1.5;
+    }
+
+    .footer {
+
+      margin-top:34px;
+
+      padding-top:22px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.08);
+
+      text-align:center;
+
+      color:#686f7c;
+
+      font-size:10px;
+    }
+
+    @media(max-width:900px) {
+
+      .player-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
+      }
+
+    }
+
+    @media(max-width:650px) {
+
+      .page {
+        padding:
+          14px
+          10px
+          40px;
+      }
+
+      .hero {
+        padding:
+          28px
+          15px
+          30px;
+      }
+
+      .stats {
+        grid-template-columns:1fr;
+      }
+
+      .player-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
+
+        gap:9px;
+      }
+
+      .player-card {
+
+        min-height:130px;
+
+        display:block;
+
+        padding:
+          16px
+          12px;
+      }
+
+      .player-number {
+
+        min-width:auto;
+
+        margin-bottom:10px;
+
+        font-size:34px;
+      }
+
+      .player-name {
+        font-size:15px;
+      }
+
+      .arrow {
+        display:none;
+      }
+
+      .how-it-works {
+        grid-template-columns:1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+  <section class="hero">
+
+    <img
+      src="/weston-eagles-logo.png"
+      alt="Weston Eagles"
+      class="logo"
+    >
+
+    <div class="kicker">
+      WESTON EAGLES BASEBALL
+    </div>
+
+    <h1>
+      ROAD TO
+      <span>PIGEON FORGE</span>
+    </h1>
+
+    <p>
+      Help the Weston Eagles on their journey to the
+      Ripken Experience in Pigeon Forge, Tennessee.
+      Select a player below to support their fundraiser.
+    </p>
+
+  </section>
+
+
+  <div class="stats">
+
+    <div class="stat">
+      <strong>13</strong>
+      <span>Players</span>
+    </div>
+
+    <div class="stat">
+      <strong>60</strong>
+      <span>Baseballs Per Player</span>
+    </div>
+
+    <div class="stat">
+      <strong>$1–$60</strong>
+      <span>Baseball Values</span>
+    </div>
+
+  </div>
+
+
+  <section class="section">
+
+    <div class="section-kicker">
+      CHOOSE YOUR PLAYER
+    </div>
+
+    <h2 class="section-title">
+      SUPPORT THE EAGLES
+    </h2>
+
+    <p class="section-text">
+      Each player has 60 baseballs available.
+      The number on the baseball equals the donation amount.
+      Click a player below to visit their individual fundraiser.
+    </p>
+
+
+    <div class="player-grid">
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=cooper-sweetland"
+      >
+        <div class="player-number">
+          #2
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Cooper Sweetland
+          </div>
+          <div class="player-cta">
+            Support Cooper
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=greg-snyder"
+      >
+        <div class="player-number">
+          #3
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Greg Snyder
+          </div>
+          <div class="player-cta">
+            Support Greg
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=easton-mores"
+      >
+        <div class="player-number">
+          #4
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Easton Mores
+          </div>
+          <div class="player-cta">
+            Support Easton
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=sebastian-eustice"
+      >
+        <div class="player-number">
+          #5
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Sebastian Eustice
+          </div>
+          <div class="player-cta">
+            Support Sebastian
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=michael-harris"
+      >
+        <div class="player-number">
+          #7
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Michael Harris
+          </div>
+          <div class="player-cta">
+            Support Michael
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=hudson-tenn"
+      >
+        <div class="player-number">
+          #10
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Hudson Tenn
+          </div>
+          <div class="player-cta">
+            Support Hudson
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=austin-shin"
+      >
+        <div class="player-number">
+          #17
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Austin Shin
+          </div>
+          <div class="player-cta">
+            Support Austin
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=diego-ventura"
+      >
+        <div class="player-number">
+          #22
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Diego Ventura
+          </div>
+          <div class="player-cta">
+            Support Diego
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=dylan-pimentel"
+      >
+        <div class="player-number">
+          #23
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Dylan Pimentel
+          </div>
+          <div class="player-cta">
+            Support Dylan
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=jose-machado"
+      >
+        <div class="player-number">
+          #24
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Jose Machado
+          </div>
+          <div class="player-cta">
+            Support Jose
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=massimo-iacona"
+      >
+        <div class="player-number">
+          #25
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Massimo Iacona
+          </div>
+          <div class="player-cta">
+            Support Massimo
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=oliver-zorrilla"
+      >
+        <div class="player-number">
+          #44
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Oliver Zorrilla
+          </div>
+          <div class="player-cta">
+            Support Oliver
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+      <a
+        class="player-card"
+        href="/fundraiser.html?player=axel-damico"
+      >
+        <div class="player-number">
+          #99
+        </div>
+
+        <div class="player-info">
+          <small>Weston Eagles</small>
+          <div class="player-name">
+            Axel D'Amico
+          </div>
+          <div class="player-cta">
+            Support Axel
+          </div>
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+  <section class="section">
+
+    <div class="section-kicker">
+      HOW IT WORKS
+    </div>
+
+    <h2 class="section-title">
+      PICK. DONATE. SUPPORT.
+    </h2>
+
+
+    <div class="how-it-works">
+
+      <div class="step">
+
+        <div class="step-number">
+          01
+        </div>
+
+        <h3>
+          Select a Player
+        </h3>
+
+        <p>
+          Choose the Weston Eagles player you would
+          like to support.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          02
+        </div>
+
+        <h3>
+          Pick Baseballs
+        </h3>
+
+        <p>
+          Each baseball is worth its number.
+          Baseball #25 equals a $25 donation.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          03
+        </div>
+
+        <h3>
+          Complete Checkout
+        </h3>
+
+        <p>
+          Finish your secure donation and help the team
+          on their Road to Pigeon Forge.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <div class="footer">
+    WESTON EAGLES BASEBALL • ROAD TO PIGEON FORGE
+  </div>
+
+</div>
+
+</body>
+
+</html>
